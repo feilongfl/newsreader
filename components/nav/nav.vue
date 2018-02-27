@@ -10,7 +10,7 @@
         </b-navbar-brand>
       </nuxt-link>
 
-      <b-navbar-brand href="#">
+      <b-navbar-brand>
         <fl-network-status/>
       </b-navbar-brand>
 
@@ -24,11 +24,11 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
 
-          <fl-nav-search/>
+          <!--<fl-nav-search/>-->
 
-          <fl-nav-lang/>
+          <!--<fl-nav-lang/>-->
 
-          <fl-nav-user/>
+          <!--<fl-nav-user/>-->
         </b-navbar-nav>
 
       </b-collapse>

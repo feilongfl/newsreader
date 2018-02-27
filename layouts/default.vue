@@ -10,13 +10,31 @@
 </template>
 
 <script>
+  /* eslint-disable spaced-comment */
+
   import nav from '~/components/nav/nav.vue'
-  import Logo from '~/components/Logo.vue'
 
   export default {
     components: {
-      'fl-nav': nav,
-      Logo
+      'fl-nav': nav
+    },
+    mounted () {
+      var lastY = 0
+
+      window.addEventListener('touchmove', function (e) {
+        var scrolly = window.pageYOffset || window.scrollTop || 0
+        var direction = e.changedTouches[0].pageY > lastY ? 1 : -1
+
+        if (direction > 0 && scrolly === 0) {
+          e.preventDefault() // 禁用下拉刷新
+          // todo 下拉刷新
+          console.log('drop down')
+        } else if (direction < 0 && scrolly === (document.body.clientHeight - window.innerHeight)) {
+          // todo 底部上啦 加载更多
+          console.log('to down', scrolly)
+        }
+        lastY = e.changedTouches[0].pageY
+      }, {passive: false})
     }
   }
 </script>
@@ -32,6 +50,10 @@
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
   }
+
+  /*body {*/
+    /*overflow-y: hidden;*/
+  /*}*/
 
   *, *:before, *:after {
     box-sizing: border-box;

@@ -11,7 +11,14 @@ module.exports = {
   ** Headers
   ** Common headers are already provided by @nuxtjs/pwa preset
   */
-  head: {},
+  head: {
+    meta: [
+      {charset: 'utf-8'}
+    ],
+    script: [
+      // {src: 'https://cdnjs.cloudflare.com/ajax/libs/webtorrent/0.98.21/webtorrent.min.js'}
+    ]
+  },
   /*
   ** Customize the progress-bar color
   */
@@ -34,8 +41,17 @@ module.exports = {
   plugins: [
     // '~/plugins/asioxcache'
     '~/plugins/vue-notifications',
+    '~/plugins/asioxcache',
     '~/plugins/img-lazeload'
   ],
+  render: {
+    bundleRenderer: {
+      cache: require('lru-cache')({
+        max: 1000,
+        maxAge: 1000 * 60 * 15
+      })
+    }
+  },
   router: {
     middleware: [
       'debug'

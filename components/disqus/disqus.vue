@@ -1,7 +1,7 @@
 <template>
   <div class="comments">
     <vue-disqus shortname="feilongnews"
-                :identifier="page_id"
+                :identifier="pageId"
     />
   </div>
 </template>
