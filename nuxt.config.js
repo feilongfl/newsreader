@@ -15,12 +15,12 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: {color: '#3B8070'},
+  loading: {color: '#eaf166'},
   /*
   ** Customize app manifest
   */
   manifest: {
-    theme_color: '#3B8070'
+    theme_color: '#336ea4'
   },
   mode: 'spa',
   /*
