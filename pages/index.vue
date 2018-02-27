@@ -19,6 +19,7 @@
             description: 'this is news 1',
             date: '2018/2/26 16:05',
             imgsrc: '/image/default.png',
+            source: '飞龙',
             id: 1
           },
           {
@@ -26,12 +27,14 @@
             description: 'this is news 2',
             date: '2018/2/26 16:05',
             imgsrc: '/image/default.png',
+            source: '飞龙',
             id: 2
           },
           {
             title: 'news3',
             description: 'this is news 3',
             date: '2018/2/26 16:05',
+            source: '飞龙',
             id: 3
           },
           {
@@ -39,12 +42,14 @@
             description: 'this is news 4',
             date: '2018/2/26 16:05',
             imgsrc: '/image/default.png',
+            source: '飞龙',
             id: 4
           },
           {
             title: 'news5',
             description: 'this is news 5',
             date: '2018/2/26 16:05',
+            source: '飞龙',
             id: 5
           }
         ]

@@ -1,25 +1,31 @@
 <template>
   <nuxt-link :to="'/news/' + id">
     <!--{{id}}-->
-    <b-card>
-      <b-media no-body>
-        <b-media-aside vertical-align="center" v-if="imgsrc">
-          <!--<b-img blank blank-color="#ccc" width="128" height="128" alt="placeholder"/>-->
-          <b-img blank-color="#ccc"
-                 width="128"
-                 height="128"
-                 v-lazy="imgsrc"
-                 alt=""/>
-        </b-media-aside>
-        <b-media-body class="ml-3">
-          <h5 class="mt-0">{{title}}</h5>
-          <div>{{date}}</div>
-          <p>
-            {{description}}
-          </p>
-        </b-media-body>
-      </b-media>
-    </b-card>
+    <b-media no-body>
+      <b-media-aside vertical-align="center" v-if="imgsrc">
+        <b-img blank-color="#ccc"
+               width="128"
+               height="128"
+               v-lazy="imgsrc"
+               alt=""/>
+      </b-media-aside>
+      <b-media-body class="ml-3">
+        <b-container fluid>
+          <b-row>
+            <b-col>
+              <h5 class="mt-0">{{title}}<b-badge variant="info">{{source}}</b-badge></h5>
+            </b-col>
+            <b-col style="text-align: right">{{date}}</b-col>
+            <div class="w-100"></div>
+            <b-col>
+              <p>
+                {{description}}
+              </p>
+            </b-col>
+          </b-row>
+        </b-container>
+      </b-media-body>
+    </b-media>
   </nuxt-link>
 </template>
 

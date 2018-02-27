@@ -8,6 +8,7 @@
                       :title="newsItem.title"
                       :description="newsItem.description"
                       :id="newsItem.id"
+                      :source="newsItem.source"
         />
       </b-list-group-item>
     </div>
