@@ -33,7 +33,8 @@ module.exports = {
   ],
   plugins: [
     // '~/plugins/asioxcache'
-    // '~/plugins/vue-notifications'
+    '~/plugins/vue-notifications',
+    '~/plugins/img-lazeload'
   ],
   router: {
     middleware: [

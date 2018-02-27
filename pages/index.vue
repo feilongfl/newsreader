@@ -18,14 +18,14 @@
             title: 'news1',
             description: 'this is news 1',
             date: '2018/2/26 16:05',
-            imgsrc: '/blank.png',
+            imgsrc: '/image/default.png',
             id: 1
           },
           {
             title: 'news2',
             description: 'this is news 2',
             date: '2018/2/26 16:05',
-            imgsrc: '/blank.png',
+            imgsrc: '/image/default.png',
             id: 2
           },
           {
@@ -38,7 +38,7 @@
             title: 'news4',
             description: 'this is news 4',
             date: '2018/2/26 16:05',
-            imgsrc: '/blank.png',
+            imgsrc: '/image/default.png',
             id: 4
           },
           {

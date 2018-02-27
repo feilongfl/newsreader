@@ -4,7 +4,12 @@
     <b-card>
       <b-media no-body>
         <b-media-aside vertical-align="center" v-if="imgsrc">
-          <b-img blank blank-color="#ccc" width="128" height="128" alt="placeholder"/>
+          <!--<b-img blank blank-color="#ccc" width="128" height="128" alt="placeholder"/>-->
+          <b-img blank-color="#ccc"
+                 width="128"
+                 height="128"
+                 v-lazy="imgsrc"
+                 alt=""/>
         </b-media-aside>
         <b-media-body class="ml-3">
           <h5 class="mt-0">{{title}}</h5>

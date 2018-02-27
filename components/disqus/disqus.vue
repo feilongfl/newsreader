@@ -1,6 +1,6 @@
 <template>
   <div class="comments">
-    <vue-disqus shortname="your_shortname_disqus"
+    <vue-disqus shortname="feilongnews"
                 :identifier="page_id"
     />
   </div>
@@ -10,8 +10,8 @@
   import VueDisqus from 'vue-disqus/VueDisqus.vue'
 
   export default {
-    props:[
-      ''
+    props: [
+      'pageId'
     ],
     components: {
       'vue-disqus': VueDisqus

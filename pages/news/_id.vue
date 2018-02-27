@@ -1,16 +1,20 @@
 <template>
-  <h1>
-    {{id}}
-  </h1>
+  <section>
+    <h1>
+      {{id}}
+    </h1>
+    <fl-disqus :pageId="id" />
+  </section>
 </template>
 
 <script>
   import disqus from '~/components/disqus/disqus.vue'
+
   export default {
     components: {
-      disqus
+      'fl-disqus': disqus
     },
-    asyncData ({ params }) {
+    asyncData({params}) {
       console.log('p => ', params) // for debug
       // Must be a number
       return {
